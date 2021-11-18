@@ -22,7 +22,7 @@
         android:layout_weight="1"
         app:tabIndicatorHeight="0dp"
         android:background="#F6F6F6"
-        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabSelectedTextColor="#3a8fea"
         />
 
 </LinearLayout>

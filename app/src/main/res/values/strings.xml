@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">StorePro</string>
+    <string name="app_name">NewsAPP</string>
+    <string name="server_url">http://100.64.124.172:8088/news_html/news.json</string>
+    <string name="server_url1">http://100.64.124.172:8088/news_html/news_content.json</string>
 </resources>

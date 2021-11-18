@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.app.ActivityCompat;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -23,20 +26,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextInputEditText mEmail;
     private TextInputEditText mPassword;
     private AppCompatButton login;
-    private AppCompatTextView signup;
+    private AppCompatButton signup;
     private AppCompatCheckBox remember_pwd;
     private SharedPreferences.Editor editor;
     private String useremail;
     private String username;
     private String usersex;
     private String userbirthday;
-    private AppCompatTextView update_pwd;
     private AppCompatTextView retrievet_pwd;
 
     //   @BindView(R.id.edit_login_email)
     //    TextInputEditText mEmail = null;
 //    @BindView(R.id.edit_login_password)
 //    TextInputEditText mPassword = null;
+
 
     private boolean checkForm() {
         final String email = mEmail.getText().toString().trim();
@@ -88,14 +91,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mEmail = findViewById(R.id.edit_login_email);
         mPassword = findViewById(R.id.edit_login_password);
         login = findViewById(R.id.btn_login);
-        signup = findViewById(R.id.tv_sign_up);
+        signup = findViewById(R.id.btn_sign_up);
         remember_pwd= findViewById(R.id.remember_pwd);
-        update_pwd=findViewById(R.id.update_pwd);
         retrievet_pwd=findViewById(R.id.retrievet_pwd);
         //设置点击事件监听器
         login.setOnClickListener(this);
         signup.setOnClickListener(this);
-        update_pwd.setOnClickListener(this);
         retrievet_pwd.setOnClickListener(this);
     }
 
@@ -137,7 +138,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                     if (match) {
                         if (match2){
-                            Toast.makeText(this, "成功记住密码", Toast.LENGTH_SHORT).show();
                             remember_pwd.setChecked(true);
                         }
                         Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
@@ -163,23 +163,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 }
                             }
                         };
-                        thread.start();//打开线程
-//                        Intent intent = new Intent(this, StoreActivity.class);
-//                        startActivity(intent);
-//                        finish();
+                        thread.start();
 
                     } else {
                         Toast.makeText(this, "账号或密码错误", Toast.LENGTH_SHORT).show();
                     }
                 }
                 break;
-            case R.id.tv_sign_up:
+            case R.id.btn_sign_up:
                 Intent intent = new Intent(LoginActivity.this, SignUPActivity.class);
                 startActivity(intent);
-                break;
-            case R.id.update_pwd:
-                Intent updatepwd = new Intent(LoginActivity.this, UpdateActivity.class);
-                startActivity(updatepwd);
                 break;
             case R.id.retrievet_pwd:
                 Intent forgetpwd = new Intent(LoginActivity.this, RetrieveActivity.class);

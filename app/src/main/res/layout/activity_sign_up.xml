@@ -10,13 +10,13 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#3C9CC7">
+        android:background="#3a8fea">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="注册页面"
+            android:text="注册"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             tools:ignore="HardcodedText" />
@@ -40,7 +40,7 @@
                 android:layout_height="72dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="24dp"
-                android:src="@drawable/log" />
+                android:src="@drawable/eye64" />
 
             <!--姓名-->
             <com.google.android.material.textfield.TextInputLayout
@@ -53,7 +53,7 @@
                     android:id="@+id/edit_sign_up_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/person"
+                    android:drawableLeft="@drawable/user"
                     android:hint="姓名"
                     android:inputType="textPersonName"
                     tools:ignore="HardcodedText" />
@@ -70,7 +70,7 @@
                     android:id="@+id/edit_sign_up_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/email"
+                    android:drawableLeft="@drawable/email1"
                     android:hint="邮箱"
                     android:inputType="textEmailAddress"
                     tools:ignore="HardcodedText" />
@@ -105,7 +105,7 @@
                     android:id="@+id/edit_sign_up_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/lock"
+                    android:drawableLeft="@drawable/password"
                     android:hint="密码"
                     android:inputType="textPassword"
                     tools:ignore="HardcodedText" />
@@ -123,7 +123,7 @@
                     android:id="@+id/edit_sign_up_re_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/lock"
+                    android:drawableLeft="@drawable/password"
                     android:hint="重复密码"
                     android:inputType="textPassword"
                     tools:ignore="HardcodedText" />
@@ -140,7 +140,7 @@
                     android:id="@+id/edit_sign_up_sex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_sex"
+                    android:drawableLeft="@drawable/sex"
                     android:hint="性别"
                     android:inputType="text"
                     tools:ignore="HardcodedText" />
@@ -157,7 +157,7 @@
                     android:id="@+id/edit_sign_up_birthday"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_birthday"
+                    android:drawableLeft="@drawable/birthday"
                     android:hint="生日"
                     android:inputType="text"
                     tools:ignore="HardcodedText" />
@@ -169,7 +169,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="24dp"
-                android:background="@android:color/holo_blue_dark"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/btn_selector"
                 android:gravity="center"
                 android:padding="12dp"
                 android:text="注册"

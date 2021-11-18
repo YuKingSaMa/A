@@ -23,9 +23,9 @@ public class SendEmail {
     // 是否启用调试模式（启用调试模式可打印客户端与服务器交互过程时一问一答的响应消息）
     private String IS_ENABLED_DEBUG_MOD = "true";
     // 发件人
-    private String from = "13655969421@163.com";     //你新注册的邮箱
+    private String from = "18250024665@163.com";     //你新注册的邮箱
     // 收件人
-    private String to = "";              //收件人，为EditText填入的邮箱地址
+    private String to = " ";              //收件人，为EditText填入的邮箱地址
     // 初始化连接邮件服务器的会话信息
     private Properties props = null;
 
@@ -66,7 +66,7 @@ public class SendEmail {
         // 获得Transport实例对象
         Transport transport = session.getTransport();
         // 打开连接
-        transport.connect("13655969421", "PYNNGSSLNLJPSLBI");         //邮箱名字和刚才设置的授权密码
+        transport.connect("18250024665", "VROJLWFAWMOVVORR");         //邮箱名字和刚才设置的授权密码
         // 将message对象传递给transport对象，将邮件发送出去
         transport.sendMessage(message, message.getAllRecipients());
         // 关闭连接
@@ -85,7 +85,7 @@ public class SendEmail {
         // 创建MimeMessage实例对象
         MimeMessage message = new MimeMessage(session);
         // 设置邮件主题
-        message.setSubject("购物平台用户忘记密码邮箱验证测试");                     //验证码邮件的显示文字
+        message.setSubject("NewsAPP忘记密码邮箱验证");                     //验证码邮件的显示文字
         // 设置发送人
         message.setFrom(new InternetAddress(from));
         // 设置发送时间
@@ -107,9 +107,9 @@ public class SendEmail {
      */
     static class MyAuthenticator extends Authenticator {
 
-        private String username = "13655969421";     //邮箱名字
+        private String username = "18250024665";     //邮箱名字
 
-        private String password = "PYNNGSSLNLJPSLBI";     //邮箱授权密码
+        private String password = "VROJLWFAWMOVVORR";     //邮箱授权密码
 
         public MyAuthenticator() {
             super();

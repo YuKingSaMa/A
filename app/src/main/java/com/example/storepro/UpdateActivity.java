@@ -99,9 +99,9 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
                         User user = data.get(i);
                         if (email.equals(user.getEmail()) && password.equals(user.getPassword())) {
                             sqllite_DB.update1(newpassword);
-                            Toast.makeText(this,"密码修改成功",Toast.LENGTH_LONG).show();
+                            Toast.makeText(this,"密码修改成功",Toast.LENGTH_SHORT).show();
                         }else {
-                            Toast.makeText(this,"密码修改失败",Toast.LENGTH_LONG).show();
+
                         }
                     }
                 }

@@ -2,24 +2,34 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.storepro">
     <!-- 允许联网 -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <!-- 获取wifi网络状态的信息 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/news"
+        android:label="NewsAPP"
+        android:roundIcon="@drawable/news"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".RetrieveActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".UpdateUserInfoActivity"></activity>
+        <activity android:name=".UpdateUserImgActivity" />
+        <activity android:name=".RetrieveActivity" />
         <activity android:name=".UpdateActivity" />
         <activity android:name=".StoreActivity" />
         <activity android:name=".SignUPActivity" />
-        <activity android:name=".PersonalSettingActivity"/>
+        <activity android:name=".PersonalSettingActivity" />
+        <activity android:name=".News.NewsActivity1" />
+        <activity android:name=".News.NewsActivity2" />
+        <activity android:name=".News.NewsActivity3" />
+        <activity android:name=".News.NewsActivity4" />
+        <activity android:name=".News.NewsActivity5" />
+        <activity android:name=".News.NewsActivity6" />
+        <activity android:name=".News.NewsActivity7" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
